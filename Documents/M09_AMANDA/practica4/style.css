@@ -119,19 +119,22 @@ body {
 }
 
 .servicios-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
   max-width: 1100px;
   margin: 0 auto;
 }
 
 .servicio {
-  background: #ec7bcc8a; 
+  background: #ec7bcc8a;
   padding: 25px 20px;
   border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 240px;
+  max-width: 260px;
 }
 
 .servicio:hover {
@@ -169,21 +172,23 @@ body {
   letter-spacing:.4px;
 }
 
-.testimonios-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(180px,1fr));  
-  gap:28px;                                                  
-  max-width:1100px;
-  margin:0 auto;
-  align-items:stretch;            
+.testimonios-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.testimonio{
-  background:#f9fbf2;
-  padding:22px 24px;
-  border-radius:14px;
-  box-shadow:0 10px 22px rgba(0,0,0,.08); 
-  border:1px solid rgba(255,255,255,.6);
+.testimonio {
+  background: #f9fbf2;
+  padding: 22px 24px;
+  border-radius: 14px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  flex: 1 1 250px;
+  max-width: 280px;
 }
 
 .testimonio p{
