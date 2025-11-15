@@ -1,23 +1,27 @@
-# PawTinder Care
+# PawTinder – Práctica 6: Multimedia adaptativo
 
-## Descripción
-Este proyecto es una landing page que realicé como práctica adaptativa. Su objetivo es mostrar una página informativa sobre adopción y acciones solidarias con animales.  
+Este repositorio forma parte de las prácticas de M09.  
+Aquí trabajo una landing page llamada **PawTinder**, pensada para fomentar la adopción responsable de perritos y la participación en acciones solidarias (donaciones, voluntariado, intercambio de juguetes, etc.).
 
-## Tecnologías utilizadas
-- HTML  
-- CSS  
-- Bootstrap  
-- Git y GitHub Pages  
+La práctica 6 se centra en hacer que las imágenes y el vídeo sean adaptativos y mejoren la experiencia en distintos tamaños de pantalla.
 
-## Versiones
-- version-grid: maquetación usando CSS Grid.  
-- version-flex: maquetación usando Flexbox.  
-- version-bootstrap: maquetación usando Bootstrap (esta es la versión final).  
+---
 
-## Publicación
-La versión que publiqué es la de Bootstrap.  
-Enlace: https://tully0206.github.io/practica4-pawtinderCare/
+## Enlaces
+- GitHub Pages (versión publicada): https://tully0206.github.io/practica4-pawtinderCare/
 
-## Alumna
-Jhoana Martínez  
-ILERNA 2025
+Para esta práctica estoy usando la rama `practica-06` como base de la versión que se ve en GitHub Pages.
+
+---
+
+## Ejercicio 6.1 – Imágenes y vídeo adaptativos
+
+En el CSS he añadido una regla global para que **todas las imágenes y vídeos** se escalen de forma proporcional dentro de su contenedor:
+
+```css
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
