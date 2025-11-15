@@ -119,12 +119,14 @@ body {
 }
 
 .servicios-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   max-width: 1100px;
   margin: 0 auto;
+  justify-content: center;
 }
+
 
 .servicio {
   background: #ec7bcc8a; 
@@ -132,6 +134,9 @@ body {
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 240px;  
+  max-width: 260px;
+
 }
 
 .servicio:hover {
@@ -170,13 +175,14 @@ body {
 }
 
 .testimonios-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(180px,1fr));  
-  gap:28px;                                                  
-  max-width:1100px;
-  margin:0 auto;
-  align-items:stretch;            
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+  justify-content: center;
 }
+
 
 .testimonio{
   background:#f9fbf2;
@@ -184,6 +190,8 @@ body {
   border-radius:14px;
   box-shadow:0 10px 22px rgba(0,0,0,.08); 
   border:1px solid rgba(255,255,255,.6);
+  flex: 1 1 260px;
+  max-width: 340px;
 }
 
 .testimonio p{
@@ -249,17 +257,17 @@ footer {
   .hero-text p { font-size: 0.98rem; }
 
   .servicios { padding: 72px 18px 64px; }
+
   .servicios-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 26px;
-    max-width: 980px;
+    justify-content: center;
+  }
+  .servicio {
+    flex: 1 1 260px;
   }
 
   .testimonios { padding: 72px 18px 64px; }
-  .testimonios-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 24px;
-    max-width: 980px;
+  .testimonios-grid {justify-content: center; }
+  .testimonio { flex: 1 1 260px;
   }
 }
 
@@ -282,26 +290,30 @@ footer {
   .servicios { padding: 56px 14px 52px; }
   .servicios h2 { font-size: 1.8rem; margin-bottom: 14px; }
   .servicios .intro-text { margin-bottom: 28px; }
-  .servicios-grid {
-    grid-template-columns: 1fr;        /* una columna para respirar */
-    gap: 18px;
-    max-width: 640px;
+   .servicios-grid {
+    justify-content: center;
   }
-  .servicio { padding: 18px; }
+  .servicio {
+    flex: 1 1 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
 
   .testimonios { padding: 56px 14px 52px; }
   .testimonios h2 { font-size: 1.6rem; margin-bottom: 20px; }
   .testimonios-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    max-width: 640px;
+    justify-content: center;
   }
-  .testimonio { padding: 18px; }
+  .testimonio {
+    flex: 1 1 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
 
   .contacto { padding: 56px 14px 58px; }
   .contacto h2 { font-size: 1.6rem; }
   .contacto p { font-size: 0.95rem; }
-  .btn { width: auto; }                 /* o 100% si quieres botones de ancho completo */
+  .btn { width: auto; }                 
 }
 
 /* Muy pequeño (≤ 480px) */
